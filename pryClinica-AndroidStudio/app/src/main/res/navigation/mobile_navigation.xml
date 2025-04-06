@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.migu3lone.pryclinica.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_especialidad"
+        android:name="com.migu3lone.pryclinica.ui.especialidad.MenuEspecialidadFragment"
+        android:label="@string/menu_especialidad"
+        tools:layout="@layout/fragment_menuespecialidad" />
+
+    <fragment
+        android:id="@+id/nav_medico"
+        android:name="com.migu3lone.pryclinica.ui.medico.MenuMedicoFragment"
+        android:label="@string/menu_medico"
+        tools:layout="@layout/fragment_menumedico" />
+
+    <fragment
+        android:id="@+id/nav_cita"
+        android:name="com.migu3lone.pryclinica.ui.cita.MenuCitaFragment"
+        android:label="@string/menu_cita"
+        tools:layout="@layout/fragment_menucita" />
+
+    <fragment
+        android:id="@+id/nav_paciente"
+        android:name="com.migu3lone.pryclinica.ui.paciente.MenuPacienteFragment"
+        android:label="@string/menu_paciente"
+        tools:layout="@layout/fragment_menupaciente" />
+</navigation>

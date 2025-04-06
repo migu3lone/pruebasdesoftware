@@ -1,0 +1,267 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clínica Santa Lucía"
+            android:textColor="#4CAF50"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_recommendations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/textHome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_recommendation_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recomendación del Día"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/tv_recommendation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Es importante mantenerte hidratado."
+                    android:textSize="16sp"
+                    android:textColor="#666"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_first_aid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/card_recommendations"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recomendaciones de Primeros Auxilios"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descubre cómo actuar en situaciones de emergencia."
+                    android:textSize="14sp"
+                    android:textColor="#666" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_noticias"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/card_first_aid"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_noticias">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minsa fortalece acciones para evitar la proliferación del zancudo que transmite el dengue"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22px"
+                android:justificationMode="inter_word"
+                android:text="Tras las fuertes lluvias registradas en la región de Huánuco, el Ministerio de Salud (Minsa), a través de la Dirección Regional de Salud (Diresa), y la Municipalidad Distrital de Amarilis iniciaron las acciones de identificación y eliminación de criaderos de zancudos, charlas de sensibilización y entrega de tapa de baldes en los sectores 3, 4 y 5 de San Luis del mencionado distrito, con el objetivo de evitar la proliferación del zancudo Aedes aegypti, transmisor del dengue."
+                android:textColor="#666"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img_example"
+                android:layout_width="259dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Descripción de la imagen"
+                android:scaleType="centerCrop"
+                android:src="@drawable/minsa" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22px"
+                android:justificationMode="inter_word"
+                android:text="Estas acciones se realizan como medida preventiva y cuentan con la participación de 69 inspectores, agentes comunitarios de salud y actores sociales. El desarrollo de las actividades consiste en la identificación de potenciales criaderos como chapas, baldes viejos, botellas, llantas y otros elementos en desuso que puedan acumular agua producto de las lluvias y faciliten la reproducción del zancudo."
+                android:textColor="#666"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_noticias2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/card_noticias"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_noticias">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INSN reporta incremento de casos de niños y adolescentes con diabetes tipo 2"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22px"
+                    android:justificationMode="inter_word"
+                    android:text="Institución recibe al año más de 10 casos nuevos de menores con este tipo de diabetes. Programa de Atención Integral al Niño Diabético (PAINDI) del INSN realizó campaña de despistaje."
+                    android:textColor="#666"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_2"
+                    android:layout_width="259dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image2" />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_noticias3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/card_noticias2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_noticias">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clínica Santa Lucía inaugura nueva Unidad de Atención de Emergencias Pediátricas"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22px"
+                    android:justificationMode="inter_word"
+                    android:text="Con el objetivo de fortalecer la atención integral de sus pacientes más jóvenes, la Clínica Santa Lucía anunció hoy la inauguración de su nueva Unidad de Emergencias Pediátricas, diseñada especialmente para brindar una atención rápida, eficiente y especializada a niños y niñas de todas las edades."
+                    android:textColor="#666"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="259dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image3" />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

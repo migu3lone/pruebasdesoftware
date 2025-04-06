@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/editar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/editar"
+        android:textSize="18sp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="5dp" />
+
+    <ImageView
+        android:id="@+id/eliminar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/eliminar"
+        android:textSize="18sp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="5dp" />
+
+    <TextView
+        android:id="@+id/vr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="5dp" />
+
+    <TextView
+        android:id="@+id/vr2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="5dp"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/vr3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="5dp" />
+
+    <TextView
+        android:id="@+id/vr4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="5dp" />
+
+    <TextView
+        android:id="@+id/vr5"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="5dp"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/vr6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:paddingBottom="5dp" />
+</LinearLayout>

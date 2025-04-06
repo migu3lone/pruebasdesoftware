@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cita"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.cita.ViewCitaFragment">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:queryHint="Ingrese especialidad"
+        app:iconifiedByDefault="false"
+        android:layout_marginBottom="15dp" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp" >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCita"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scrollbars="vertical|horizontal" />
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPaciente"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scrollbars="vertical|horizontal"
+            android:visibility="gone" />
+    </HorizontalScrollView>
+</LinearLayout>

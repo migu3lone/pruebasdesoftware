@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addPaciente"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.paciente.AddPacienteFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="8dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etIdPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID Paciente"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/etApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellidos"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etNombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombres"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="DNI"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/etSexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecciona el género"
+                android:textSize="15sp"
+                android:layout_marginBottom="5dp" />
+
+            <RadioGroup
+                android:id="@+id/rgSexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbMasculino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masculino" />
+
+                <RadioButton
+                    android:id="@+id/rbFemenino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Femenino" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fecha de Nacimiento"
+                android:focusable="false"
+                android:inputType="none" />
+
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo Electrónico"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/etDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dirección"
+                android:inputType="textPostalAddress" />
+
+            <EditText
+                android:id="@+id/etCelular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Celular"
+                android:inputType="phone" />
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>
