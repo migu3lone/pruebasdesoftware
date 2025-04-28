@@ -1,3 +1,5 @@
+#pyinstaller --onefile --noconsole --add-data "sound.mp3;." --add-data "utp.png;." --add-data "bin/bin.exe;bin" --add-data "octa/octa.exe;octa" --add-data "hexa/hexa.exe;hexa" --add-data "base/base.exe;base" conversor.py
+
 from tkinter import *
 from PIL import ImageTk, Image
 import pygame

@@ -1,3 +1,5 @@
+#pyinstaller --onefile --noconsole --add-data "sound.mp3;." --add-data "utp.png;." cifrado.py
+
 from PIL import ImageTk, Image
 from tkinter import messagebox, Radiobutton, IntVar
 import pygame
@@ -21,7 +23,7 @@ def procesar_texto(cifrar=True):
     texto = texto_entry.get().upper()
     decimacion = decimacion_entry.get()
     desplazamiento = desplazamiento_entry.get()
-    
+
     #verificar errores de entradas
     if len(texto) == 0 or len(decimacion) == 0 or len(desplazamiento) == 0:
         messagebox.showerror("Error", "Ingresa texto, decimacion y desplazamiento.")
@@ -35,7 +37,7 @@ def procesar_texto(cifrar=True):
     if not desplazamiento.replace(' ', '').isalnum():
         messagebox.showerror("Error", "Ingresa una desplazamiento válida (número o texto).")
         return
-    
+
     # Seleccionar el alfabeto adecuado según el módulo
     alfabeto = alfa1 if modulo == 26 else alfa2
 
@@ -52,7 +54,7 @@ def procesar_texto(cifrar=True):
     except ValueError:
         messagebox.showerror("Error", "No todos los caracteres del texto están en el alfabeto.")
         return
-    
+
     # Procesar el desplazamiento
     desplazamiento_array = []
     try:
@@ -106,13 +108,13 @@ def procesar_texto(cifrar=True):
             # Cortar arreglo B si su longitud es mayor que la de arreglo A
             if len(desplazamiento_array) > len(texto):
                 desplazamiento_array = desplazamiento_array[:len(texto)]"""
-        
-        
+
+
 
     # Ajustar la longitud de desplazamiento_array para que coincida con texto_array
     while len(desplazamiento_array) < len(texto_array):
         desplazamiento_array.extend(desplazamiento_array)
-    
+
     desplazamiento_array = desplazamiento_array[:len(texto_array)]
 
     xdecimacion = list(map(int, decimacion_array))
@@ -141,7 +143,7 @@ def cifrado(crypto, modulo, texto_array, xdecimacion, xdesplazamiento, alfabeto,
             case "vernam":#XOR(mensaje; clave)
                 resultado = [chr(m ^ d) for m, d in zip(texto_array, xdesplazamiento)]
                 txt = ''.join(resultado)
-            
+
     #elif xdecimacion[0] == 1:
     elif cifrar is False: #and xdecimacion[0] == 1:
         match crypto:
